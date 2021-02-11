@@ -1,6 +1,6 @@
 from Consts import *
 
-from googletrans import Translator
+from pygoogletranslation import Translator
 
 translator = Translator()
 
