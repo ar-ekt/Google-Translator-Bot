@@ -1,9 +1,12 @@
+import os
 from Emojies import *
+from dotenv import load_dotenv, find_dotenv
+load_dotenv(find_dotenv())
 
 
 # T O K E N
 # Keep your TOKEN secure and store it safely
-TOKEN = "TOKEN"
+TOKEN = os.getenv("TOKEN")
 BOT_ID = int(TOKEN[:TOKEN.index(":")])
 
 
