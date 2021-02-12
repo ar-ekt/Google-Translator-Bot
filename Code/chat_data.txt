@@ -1,1 +1,8 @@
-{}
+{"687143857": {"src": "auto", "dest": "en", "favorites": {"src": [], "dest": []}, "recent": {"src": [], "dest": []}, "unrecognized": [0, "", 0], "queries": {"src": -1, "dest": -1, "fav_set": -1, "last": {"id": -1, "pointer": "src"}}},
+ "880839607": {"src": "en", "dest": "fa", "favorites": {"src": [], "dest": []}, "recent": {"src": [], "dest": []}, "unrecognized": [0, "", 0], "queries": {"src": -1, "dest": -1, "fav_set": -1, "last": {"id": -1, "pointer": ""}}},
+ "1156793950": {"src": "fa", "dest": "en", "favorites": {"src": [], "dest": []}, "recent": {"src": [], "dest": []}, "unrecognized": [0, "", 0], "queries": {"src": -1, "dest": -1, "fav_set": -1, "last": {"id": -1, "pointer": ""}}},
+ "934159905": {"src": "en", "dest": "fa", "favorites": {"src": [], "dest": []}, "recent": {"src": [], "dest": []}, "unrecognized": [0, "", 0], "queries": {"src": -1, "dest": -1, "fav_set": -1, "last": {"id": -1, "pointer": ""}}},
+ "853884960": {"src": "en", "dest": "fa", "favorites": {"src": [], "dest": []}, "recent": {"src": [], "dest": []}, "unrecognized": [0, "", 0], "queries": {"src": -1, "dest": -1, "fav_set": -1, "last": {"id": -1, "pointer": ""}}},
+ "1112768060": {"src": "en", "dest": "fa", "favorites": {"src": [], "dest": []}, "recent": {"src": [], "dest": []}, "unrecognized": [0, "", 0], "queries": {"src": -1, "dest": -1, "fav_set": -1, "last": {"id": -1, "pointer": ""}}},
+ "-1001174443431": {"src": "en", "dest": "fa", "favorites": {"src": [], "dest": []}, "recent": {"src": [], "dest": []}, "unrecognized": [0, "", 0], "queries": {"src": -1, "dest": -1, "fav_set": -1, "last": {"id": -1, "pointer": ""}}},
+ "-1001217746837": {"src": "en", "dest": "fa", "favorites": {"src": [], "dest": []}, "recent": {"src": [], "dest": []}, "unrecognized": [0, "", 0], "queries": {"src": -1, "dest": -1, "fav_set": -1, "last": {"id": -1, "pointer": ""}}}}
