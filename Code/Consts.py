@@ -48,6 +48,8 @@ SELECTED_LANGUAGES_MESSAGE = "<b>%s</b> %s to <b>%s</b> %s"
 
 FILE_TRANSLATE_FAILURE = "I can not translate this file %s" % SAD_EMOJI
 TEXT_TRANSLATE_FAILURE = "I can not translate this text %s" % SAD_EMOJI
+INGROUP_TRANSLATE_FAILURE = "You need reply a message like this" \
+                            "\n\n/tr <destination-language>"
 
 SRC_COMMAND_MESSAGE = "Source language:"
 DEST_COMMAND_MESSAGE = "Destination language:"
