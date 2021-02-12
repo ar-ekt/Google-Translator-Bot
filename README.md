@@ -3,6 +3,7 @@ A telegram bot translate messages and files
 
 Features:
 - inline mode
+- can be used in groups by replying to messages
 - supports 100 languages and detect language
 - manage favorite languages
 
