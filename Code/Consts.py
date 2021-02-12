@@ -111,8 +111,8 @@ LANGUAGES_MENU = {AUTO: AUTO_EMOJI,
                   FAV: STAR_EMOJI,
                   RECENT: CLOCK_EMOJI}
 
-DEFAULT_USER_DATA = {SRC: EN,
-                     DEST: FA,
+DEFAULT_USER_DATA = {SRC: AUTO,
+                     DEST: EN,
                      FAV: {SRC: [], DEST: []},
                      RECENT: {SRC: [], DEST: []},
                      UNRECOGNIZED: [0, "", 0],
