@@ -19,7 +19,7 @@ dispatcher.add_handler(CommandHandler(command="cancel", callback=CMD.cancel, fil
 
 dispatcher.add_handler(CommandHandler("contact", CMD.contact))
 
-dispatcher.add_handler(CommandHandler(command="tr", callback=CMD.translate_inGroup, filters=Filters.chat_type.group))
+dispatcher.add_handler(CommandHandler(command="tr", callback=CMD.translate_inGroup, filters=Filters.chat_type.groups))
 dispatcher.add_handler(MessageHandler(Filters.command & Filters.chat_type.private, CMD.unrecognized))
 
 dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command & ~Filters.via_bot(BOT_ID) & Filters.chat_type.private, CMD.translate))
