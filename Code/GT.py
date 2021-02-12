@@ -8,20 +8,22 @@ from telegram.ext import Updater, CommandHandler, MessageHandler, Filters, Callb
 updater = Updater(TOKEN, use_context=True)
 dispatcher = updater.dispatcher
 
-dispatcher.add_handler(CommandHandler("start", CMD.start))
-dispatcher.add_handler(CommandHandler("help", CMD.help))
-dispatcher.add_handler(CommandHandler("swap", CMD.swap))
-dispatcher.add_handler(CommandHandler("src", CMD.src_query))
-dispatcher.add_handler(CommandHandler("dest", CMD.dest_query))
-dispatcher.add_handler(CommandHandler("langs", CMD.selected_languages))
-dispatcher.add_handler(CommandHandler("fav", CMD.favorites_setting_query))
-dispatcher.add_handler(CommandHandler("cancel", CMD.cancel))
+dispatcher.add_handler(CommandHandler(command="start", callback=CMD.start, filters=Filters.chat_type.private))
+dispatcher.add_handler(CommandHandler(command="help", callback=CMD.help, filters=Filters.chat_type.private))
+dispatcher.add_handler(CommandHandler(command="swap", callback=CMD.swap, filters=Filters.chat_type.private))
+dispatcher.add_handler(CommandHandler(command="src", callback=CMD.src_query, filters=Filters.chat_type.private))
+dispatcher.add_handler(CommandHandler(command="dest", callback=CMD.dest_query, filters=Filters.chat_type.private))
+dispatcher.add_handler(CommandHandler(command="langs", callback=CMD.selected_languages, filters=Filters.chat_type.private))
+dispatcher.add_handler(CommandHandler(command="fav", callback=CMD.favorites_setting_query, filters=Filters.chat_type.private))
+dispatcher.add_handler(CommandHandler(command="cancel", callback=CMD.cancel, filters=Filters.chat_type.private))
+
 dispatcher.add_handler(CommandHandler("contact", CMD.contact))
 
-dispatcher.add_handler(MessageHandler(Filters.command, CMD.unrecognized))
+dispatcher.add_handler(CommandHandler(command="tr", callback=CMD.translate_inGroup, filters=Filters.chat_type.group))
+dispatcher.add_handler(MessageHandler(Filters.command & Filters.chat_type.private, CMD.unrecognized))
 
-dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command & ~Filters.via_bot(BOT_ID), CMD.translate))
-dispatcher.add_handler(MessageHandler(Filters.document.category("text"), CMD.translate_file))
+dispatcher.add_handler(MessageHandler(Filters.text & ~Filters.command & ~Filters.via_bot(BOT_ID) & Filters.chat_type.private, CMD.translate))
+dispatcher.add_handler(MessageHandler(Filters.document.category("text") & Filters.chat_type.private, CMD.translate_file))
 
 dispatcher.add_handler(CallbackQueryHandler(CMD.query_handle))
 
