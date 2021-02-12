@@ -83,6 +83,25 @@ def translate_file(update: Update, context: CallbackContext) -> None:
     
     unrecognized_zero(chat_id)
 
+def translate_inGroup(update: Update, context: CallbackContext) -> None:
+    chat_id = update.message.chat_id
+    chat_data = Data.update(chat_id)
+    
+    lang = update.message.text.split()[1:]
+    reply_msg = update.message.reply_to_message
+    if reply_msg != None and len(lang) == 1:
+        reply_id = reply_msg.message_id
+        translated = Translate.translate(reply_msg.text, "auto", lang[0])
+        if translated == False:
+            reply_text = TEXT_TRANSLATE_FAILURE
+        else:
+            reply_text = translated.text
+    else:
+        reply_text = INGROUP_TRANSLATE_FAILURE
+        reply_id = update.message.message_id
+    
+    update.message.bot.send_message(chat_id=chat_id, reply_to_message_id=reply_id, text=reply_text)
+
 # - # - # - # - # - # - # - # - # - # - # - # - # - # - # - # - # - # - # - #
 
 def selected_languages_message(chat_data: dict, chat_id: int) -> str:
